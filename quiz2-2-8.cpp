@@ -4,13 +4,14 @@
 using namespace std;
 int main()
 {
-  int empID, total, counter, N = 0;
+  int empID, total, counter;
+  string N;
   string empName, depName;
   double salary;
   ifstream empfile;
   empfile.open("employee.txt");
   cout << "ID     Name    Department    Salary\n";
-  while (!empfile.fail()) {
+  while (!empfile.eof()) {
     empfile >> empID >> empName >> depName >> salary;
     cout << empID << "   " << empName << "   " << depName << "   " << salary << endl;
     total += salary;
