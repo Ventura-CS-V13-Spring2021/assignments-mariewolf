@@ -10,9 +10,9 @@ int main()
   if (range1 >= range2)
     cout << "\nInput error: First input must be less than the second.";
   for (int i=range1; i<=range2; i++) {
-    for (int j = 2; j<i; j++) {
-      if (i % j == 0) {continue;}
-      else {
+    for (int j=2; j<i; j++) {
+      if (i%j==0) {break;}
+      else{
         cout << i << " ";
         break;
         }
