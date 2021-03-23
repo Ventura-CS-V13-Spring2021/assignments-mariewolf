@@ -4,7 +4,8 @@
 using namespace std;
 int main()
 {
-  int rdNumber, prevNumber = 0;
+  int rdNumber;
+  int prevNumber = 100;
   unsigned seed = time(0);
   srand(seed);
 
@@ -13,7 +14,7 @@ int main()
     rdNumber = rand() % 100;
     if (rdNumber > prevNumber)
       cout << rdNumber << " ";
-
+    prevNumber = rdNumber;
   }
 return 0;
 }
