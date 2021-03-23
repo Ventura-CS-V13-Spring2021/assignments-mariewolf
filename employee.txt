@@ -1,2 +1,1 @@
-1 Paperboy Newspaper 10
-2 Fireman Firestuff 50
+1 Paperboy Newspaper 10000
