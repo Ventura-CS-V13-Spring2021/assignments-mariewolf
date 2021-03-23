@@ -11,12 +11,13 @@ int main()
     cout << "\nInput error: First input must be less than the second.";
   for (int i=range1; i<=range2; i++) {
     for (int j=2; j<i; j++) {
-      if (i%j==0) {break;}
-      else{
-        cout << i << " ";
+      if (i%j==0) {
+        flag=true;
         break;
         }
+      else{flag=false;}
     }
+    if (flag==false) {cout << i << " ";}
   }
   return 0;
 }
