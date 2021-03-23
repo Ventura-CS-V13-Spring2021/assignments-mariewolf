@@ -15,7 +15,7 @@ int main()
   for (int i = 1; i <= N; i++){
     cout << "Enter the employee's ID, name, department, and salary: ";
     cin >> empID >> empName >> depName >> salary;
-    ofs << empID << empName << depName << salary;
+    ofs << empID << " " << empName << " " << depName << " " << salary << endl;
   }
 
   ofs.close();
