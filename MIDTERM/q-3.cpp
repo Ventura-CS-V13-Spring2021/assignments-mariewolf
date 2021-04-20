@@ -28,17 +28,24 @@ int findMin(int num1, int num2, int num3) {
 	// and then return it.
   //got it, thank you! oops // I'm leaving. Good luck.
   //thanks for your help!
-  if ((num1 > num2) && (num2 > num3))
-    int minimum = num3;
-  else if ((num))
+  int minimum;
+  if ((num1 > num2) && (num1 > num3))
+    minimum = num3;
+  else if ((num1 > num2) && (num3 > num2))
+    minimum = num2;
   else
-    int minimum = num1; 
+    minimum = num1; 
   return minimum;
 }
 
 int findMax(int num1, int num2, int num3) {
-  if ((num1 > num2) && (num2 > num3))
-    int maximum = num1; 
+  int maximum;
+  if ((num1 > num2) && (num1 > num3))
+    maximum = num1; 
+  else if ((num2 > num3) && (num2 > num1))
+    maximum = num2;
+  else
+    maximum = num3;
   return maximum;
 }
 
