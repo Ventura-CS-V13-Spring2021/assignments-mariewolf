@@ -16,12 +16,11 @@ int main()
     cout << "Output file opening failed.\n";
   }
 
-  isGreater(51);
-
   for (int i = 1; i <= n; i++) {
     randomNumber = getRdnum();
     if (isGreater(randomNumber))
       outStream << randomNumber << endl;
+    cout << randomNumber << endl;
   }
 
   outStream.close();
@@ -29,17 +28,19 @@ int main()
 }
 
 int getRdnum(void){
-  unsigned seed = time(0);
-  srand(seed);
-  return rand()%50;
+  int num = rand() % 50 + 1;
+  return num;
 }
 
 int isGreater(int n){
-  if (n > prevNumber)
-    prevNumber = n
+  if (prevNumber = 51)
+    prevNumber = n;
+  if (n > prevNumber) {
+    prevNumber = n;
     return 1;
-  else
-  prevNumber = n
-
-
+  }
+  else {
+    prevNumber = n;
+    return 0;
+  }
 }
