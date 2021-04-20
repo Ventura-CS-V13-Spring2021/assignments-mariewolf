@@ -5,7 +5,7 @@ using namespace std;
 int getRdnum(void);
 int findMin(int num1, int num2, int num3);
 int findMax(int num1, int num2, int num3);
-int getDifference(int num1, int num2, int num3);
+int getDifference(int minimum, int maximum);
 int fileWrite(int difference);
 
 
@@ -16,22 +16,35 @@ int main()
   int num3 = getRdnum();
   int minimum = findMin(num1, num2, num3);
   int maximum = findMax(num1, num2, num3);
-  int difference = getDifference(num1, num2, num3);
+  int difference = getDifference(minimum, maximum);
   int fileWrite(difference);  
 
   return 0;
 }
 
 int findMin(int num1, int num2, int num3) {
-  //insert code here
+	// In C++, there is no function min and max
+	// You need to make a code to find min
+	// and then return it.
+  //got it, thank you! oops // I'm leaving. Good luck.
+  //thanks for your help!
+  if ((num1 > num2) && (num2 > num3))
+    int minimum = num3;
+  else if ((num))
+  else
+    int minimum = num1; 
+  return minimum;
 }
 
 int findMax(int num1, int num2, int num3) {
-  //insert code here
+  if ((num1 > num2) && (num2 > num3))
+    int maximum = num1; 
+  return maximum;
 }
 
-int getDifference(int num1, int num2, int num3) {
-  //insert code here
+int getDifference(int minimum, int maximum) {
+  int difference = maximum - minimum;
+  return difference;
 }
 
 int getRdnum(void){
