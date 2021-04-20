@@ -17,17 +17,12 @@ int main()
   int minimum = findMin(num1, num2, num3);
   int maximum = findMax(num1, num2, num3);
   int difference = getDifference(minimum, maximum);
-  int fileWrite(difference);  
+  fileWrite(difference);  
 
   return 0;
 }
 
 int findMin(int num1, int num2, int num3) {
-	// In C++, there is no function min and max
-	// You need to make a code to find min
-	// and then return it.
-  //got it, thank you! oops // I'm leaving. Good luck.
-  //thanks for your help!
   int minimum;
   if ((num1 > num2) && (num1 > num3))
     minimum = num3;
@@ -59,27 +54,14 @@ int getRdnum(void){
   return num;
 }
 
-// Okay. Let's do more tomorrow.
-// Need more time? right?
-// I will fix it tommorrow. Okay? No problem.
-// See you .
-// Yep. just leave it and commit. let's do tomorrow again.Bye
-
-
-
-//okay, thank you. I feel like I'm missing something basic haha
-//so I should just leave it like this?
-
-//got it. goodnight!
 int fileWrite(int difference) {
-  ofstream outStream("q3numbers.txt", ios::app);
+  ofstream outStream("q3numbers.txt");
 
   if (outStream.fail()) {
     cout << "Output file opening failed.\n";
   }
 
-  outStream >> difference >> endl;
-  outStream >> "test" >> endl;
+  outStream << difference << endl;
 
   outStream.close();
 }
