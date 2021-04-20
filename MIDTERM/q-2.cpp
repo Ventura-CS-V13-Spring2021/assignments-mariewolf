@@ -1,16 +1,16 @@
 #include <iostream>
 #include <fstream>
-#include <ctime>
 using namespace std;
 
 int getRdnum(void);
 int isGreater(int n);
+int prevNumber = 51;
 
 int main()
 {
   int n = 10;
   int randomNumber;
-  ofstream outStream("MIDTERM/numbers.txt");
+  ofstream outStream("MIDTERM/numbers.txt", ios::app);
 
   if (outStream.fail()) {
     cout << "Output file opening failed.\n";
@@ -20,7 +20,6 @@ int main()
     randomNumber = getRdnum();
     if (isGreater(randomNumber))
       outStream << randomNumber << endl;
-    cout << randomNumber << endl;
   }
 
   outStream.close();
@@ -32,9 +31,7 @@ int getRdnum(void){
   return num;
 }
 
-int isGreater(int n){
-  if (prevNumber = 51)
-    prevNumber = n;
+int isGreater(int n) {
   if (n > prevNumber) {
     prevNumber = n;
     return 1;
