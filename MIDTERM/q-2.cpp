@@ -12,11 +12,13 @@ int main()
   int randomNumber;
 //   ofstream outStream("numbers.txt", ios::app);
 // fix the paht for the file.
-  ofstream outStream("MIDTERM/numbers.txt", ios::app);
+  ofstream outStream("numbers.txt", ios::app);
 // In your console,
 // cd MIDTERM
 // and then compile and run.
 // This is the simple way to run, but if it is okay, just leave it.
+
+//thanks, I didn't know I could do that. Fixed it
 
 
 

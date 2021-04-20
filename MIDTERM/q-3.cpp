@@ -59,15 +59,27 @@ int getRdnum(void){
   return num;
 }
 
+// Okay. Let's do more tomorrow.
+// Need more time? right?
+// I will fix it tommorrow. Okay? No problem.
+// See you .
+// Yep. just leave it and commit. let's do tomorrow again.Bye
 
+
+
+//okay, thank you. I feel like I'm missing something basic haha
+//so I should just leave it like this?
+
+//got it. goodnight!
 int fileWrite(int difference) {
-  ofstream outStream("MIDTERM/q3numbers.txt", ios::app);
+  ofstream outStream("q3numbers.txt", ios::app);
 
   if (outStream.fail()) {
     cout << "Output file opening failed.\n";
   }
 
-  outStream << difference << endl;
+  outStream >> difference >> endl;
+  outStream >> "test" >> endl;
 
   outStream.close();
 }
