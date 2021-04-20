@@ -8,6 +8,7 @@ int isGreater(int n);
 int main()
 {
   int n = 10;
+  int randomNumber;
   ofstream outStream("MIDTERM/numbers.txt");
 
   if (outStream.fail()) {
@@ -15,7 +16,9 @@ int main()
   }
 
   for (int i = 1; i <= n; i++) {
-    
+    randomNumber = getRdnum();
+    if (isGreater(randomNumber))
+      outStream << randomNumber << endl;
   }
 
   outStream.close();
