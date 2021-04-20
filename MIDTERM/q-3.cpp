@@ -14,8 +14,10 @@ int main()
   int num1 = getRdnum();
   int num2 = getRdnum();
   int num3 = getRdnum();
-
-
+  int minimum = findMin(num1, num2, num3);
+  int maximum = findMax(num1, num2, num3);
+  int difference = getDifference(num1, num2, num3);
+  int fileWrite(difference);  
 
   return 0;
 }
