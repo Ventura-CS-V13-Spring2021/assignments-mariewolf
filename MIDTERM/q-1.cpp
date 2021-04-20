@@ -29,6 +29,7 @@ int main()
   }
 
   cout << "The total number of students who have an average > 80: " << gradeCounter << endl;
+  inStream.close();
   return 0;
 
 }
