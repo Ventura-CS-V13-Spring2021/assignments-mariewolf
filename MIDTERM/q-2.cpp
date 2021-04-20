@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <ctime>
 using namespace std;
 
 int getRdnum(void);
@@ -15,6 +16,8 @@ int main()
     cout << "Output file opening failed.\n";
   }
 
+  isGreater(51);
+
   for (int i = 1; i <= n; i++) {
     randomNumber = getRdnum();
     if (isGreater(randomNumber))
@@ -26,9 +29,17 @@ int main()
 }
 
 int getRdnum(void){
-
+  unsigned seed = time(0);
+  srand(seed);
+  return rand()%50;
 }
 
 int isGreater(int n){
+  if (n > prevNumber)
+    prevNumber = n
+    return 1;
+  else
+  prevNumber = n
+
 
 }
