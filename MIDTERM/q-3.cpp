@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
 using namespace std;
 
 int getRdnum(void);
@@ -17,7 +18,8 @@ int main()
   int minimum = findMin(num1, num2, num3);
   int maximum = findMax(num1, num2, num3);
   int difference = getDifference(minimum, maximum);
-  fileWrite(difference);  
+  if (difference >= 3)
+    fileWrite(difference);  
 
   return 0;
 }
@@ -55,13 +57,13 @@ int getRdnum(void){
 }
 
 void fileWrite(int difference) {
-  ofstream outStream("q3numbers.txt");
+  ofstream outStream("q3numbers.txt", ios::app);
 
   if (outStream.fail()) {
     cout << "Output file opening failed.\n";
   }
 
   outStream << difference << endl;
-
   outStream.close();
+  main();
 }
