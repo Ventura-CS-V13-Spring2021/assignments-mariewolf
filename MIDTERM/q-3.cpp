@@ -6,7 +6,7 @@ int getRdnum(void);
 int findMin(int num1, int num2, int num3);
 int findMax(int num1, int num2, int num3);
 int getDifference(int minimum, int maximum);
-int fileWrite(int difference);
+void fileWrite(int difference);
 
 
 int main()
@@ -24,9 +24,9 @@ int main()
 
 int findMin(int num1, int num2, int num3) {
   int minimum;
-  if ((num1 > num2) && (num1 > num3))
+  if ((num1 >= num3) && (num2 >= num3))
     minimum = num3;
-  else if ((num1 > num2) && (num3 > num2))
+  else if ((num1 >= num2) && (num3 >= num2))
     minimum = num2;
   else
     minimum = num1; 
@@ -35,9 +35,9 @@ int findMin(int num1, int num2, int num3) {
 
 int findMax(int num1, int num2, int num3) {
   int maximum;
-  if ((num1 > num2) && (num1 > num3))
+  if ((num1 >= num2) && (num1 >= num3))
     maximum = num1; 
-  else if ((num2 > num3) && (num2 > num1))
+  else if ((num2 >= num3) && (num2 >= num1))
     maximum = num2;
   else
     maximum = num3;
@@ -54,7 +54,7 @@ int getRdnum(void){
   return num;
 }
 
-int fileWrite(int difference) {
+void fileWrite(int difference) {
   ofstream outStream("q3numbers.txt");
 
   if (outStream.fail()) {
