@@ -10,13 +10,12 @@ int main() {
 
   srand(time(0));
 
-  for (int i=0; i<N; i++) {
+  for (int i=0; i<N; i++)
     numbers[i] = (rand() % 100);
-  }
   
-  for (int i=0; i<N; i++) {
-    cout << numbers[i] << " ";
-    sum += numbers[i];
+  for (int eachvalue : numbers) {
+    cout << eachvalue << " ";
+    sum += eachvalue;
   }
 
   cout << endl;
