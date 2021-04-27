@@ -33,9 +33,9 @@ void count0cluster(int bin[], int size)
         count += 1;
         flag = 1;
       }
-      else
-        flag = 0;
     }
-  }
-  cout << endl << "Count of Cluster: " << count << endl;
+    else
+      flag = 0;
+    }
+  cout << "Count of Cluster: " << count << endl;
 }
