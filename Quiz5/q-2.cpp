@@ -38,8 +38,8 @@ void findmatchnum(int num1[], int size1, int num2[], int size2)
       if (num1[j] == num2[i]) {
         match += 1;
         for (int k=0; k<size2; k++) {
-          if (num1[j] == num2[i])
-            num2[i] = 0;
+          if (num1[j] == num2[k])
+            num2[k] = 10;
         }
         break; 
         }
