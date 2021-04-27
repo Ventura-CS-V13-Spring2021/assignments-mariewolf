@@ -8,5 +8,17 @@ int main()
     int     diff[10];
     int     sum=0;
 
-    //*** Your code 
+    cout << "Original array: ";
+    for (int i=0; i<SIZE; i++) {
+      sum += numbers[i];
+      cout << numbers[i] << " ";
+    }
+    
+    cout << endl << "New array: ";
+
+    
+    for (int i=0; i<SIZE; i++)
+      diff[i] = sum-numbers[i]
+    
+  
 }
