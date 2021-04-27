@@ -15,10 +15,10 @@ int main()
     }
     
     cout << endl << "New array: ";
+    for (int i=0; i<SIZE; i++) {
+      diff[i] = sum-numbers[i];
+      cout << diff[i] << " ";
+    }
 
-    
-    for (int i=0; i<SIZE; i++)
-      diff[i] = sum-numbers[i]
-    
-  
+    return 0;
 }
