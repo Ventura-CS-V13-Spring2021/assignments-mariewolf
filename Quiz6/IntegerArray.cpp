@@ -7,14 +7,14 @@ int IntegerArray::getLength(void) const {
   //retrieve length
   return length;
 }
-void IntegerArray::sortArray(int flag) {
-  //sort array
-  if (flag == 0)
-    sort(numbers, numbers+length)
+void IntegerArray::sortArray(int v) {
+
+  if (v == 0)
+    sort(numbers, numbers+length);
   else
-    //insert reverse sort order
+    //reverse sort
 }
-void IntegerArray::fillUp(void); {
+void IntegerArray::fillUp(void) {
   //fill array
   srand(time(0));
   for(int i=0;i<N; i++)

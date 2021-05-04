@@ -1,5 +1,6 @@
 #ifndef INTEGERARRAY_H
 #define INTEGERARRAY_H
+
 class IntegerArray
 {
 private:
