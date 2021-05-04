@@ -2,7 +2,6 @@
 #include <algorithm>
 #include "IntegerArray.hpp"
 using namespace std;
-int lastNum = 100;
 
 int IntegerArray::getLength(void) const
 {
@@ -26,7 +25,7 @@ void IntegerArray::fillUp(void)
     // Set N to the length.
     srand(time(0));
     for(int i=0;i<N; i++)
-      numbers[i] = rand() % 100;
+      numbers[i] = rand() % 101;
     length = N;
 }
 void IntegerArray::sortAsc()

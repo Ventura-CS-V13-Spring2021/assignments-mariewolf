@@ -20,6 +20,6 @@ int main() {
 
   cout << "\n\nAppending an element: ";
   N.appendElement(100);
-  cout << "Current length is: " << N.getLength() << endl;
+  cout << "Current length is " << N.getLength() << endl;
   N.printAll();
 }
