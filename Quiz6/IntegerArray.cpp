@@ -12,7 +12,7 @@ void IntegerArray::sortArray(int v) {
   if (v == 0)
     sort(numbers, numbers+length);
   else
-    //reverse sort
+    sort(numbers, numbers+length, greater<int>());
 }
 void IntegerArray::fillUp(void) {
   //fill array
@@ -21,7 +21,7 @@ void IntegerArray::fillUp(void) {
     numbers[i] = rand() % 100;
   length = N;
 }
-void IntegerArray::getPrimenumber(void) const {
+int IntegerArray::getPrimenumbers(void) const {
   //count # of primes
   bool primeFlag = false;
   int count = 0;
@@ -36,6 +36,7 @@ void IntegerArray::getPrimenumber(void) const {
     if (primeFlag == false)
       count += 1;
   }
+  return count;
 
 }
 void IntegerArray::printAll(void) const {

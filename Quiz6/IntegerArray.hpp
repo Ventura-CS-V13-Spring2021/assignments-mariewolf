@@ -12,7 +12,7 @@ public:
     int getLength(void) const;
     void sortArray(int flag);
     void fillUp(void);
-    void getPrimenumber(void) const;
+    int getPrimenumbers(void) const;
     void printAll(void) const;
 };
 #endif

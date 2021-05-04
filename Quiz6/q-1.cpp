@@ -8,17 +8,17 @@ int main()
 
   N.fillUp();
   N.printAll();
-  cout << "Current length is " << N.getLength() << endl;
+  cout << "\nCurrent length is " << N.getLength() << endl;
 
-  cout << "After sorting with ascending order : \n ";
+  cout << "\nAfter sorting with ascending order: \n";
   N.sortArray(0);
   N.printAll();
 
-  cout << "After sorting with descending order: \n ";
+  cout << "\n\nAfter sorting with descending order: \n";
   N.sortArray(1);
   N.printAll();
 
-  cout << "The number of prime numbers " << endl;
+  cout << "\n\nThe number of prime numbers: " << N.getPrimenumbers() << endl;
 }
 
-//code copied from question prompt
+//code mostly copied from question prompt
