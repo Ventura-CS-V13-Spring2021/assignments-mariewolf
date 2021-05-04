@@ -7,9 +7,9 @@ int IntegerArray::getLength(void) const {
   //retrieve length
   return length;
 }
-void IntegerArray::sortArray(int v) {
-
-  if (v == 0)
+void IntegerArray::sortArray(int flag) {
+  //sort arrays based on flag
+  if (flag == 0)
     sort(numbers, numbers+length);
   else
     sort(numbers, numbers+length, greater<int>());
