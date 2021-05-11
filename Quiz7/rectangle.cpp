@@ -28,7 +28,6 @@ double Rectangle::getArea() {
   double y2 = rt.getY();
 
   area = (x2-x1)*(y2-y1);
-  return area;
 }
 Coordinate Rectangle::getCenter() {
   //calculate center
@@ -40,7 +39,7 @@ Coordinate Rectangle::getCenter() {
   double centerx = (x1+(x2-x1)/2);
   double centery = (y1+(y2-y1)/2);
 
-  center.setXY(1, 1);
+  center.setXY(centerx, centery);
   return center;
 }
 void Rectangle::setLBRT(Coordinate lbval, Coordinate rtval) {
@@ -50,13 +49,11 @@ void Rectangle::setLBRT(Coordinate lbval, Coordinate rtval) {
 }
 void Rectangle::printRectangle() const {
   //print rectangle
-  getCenter();
   cout << "Left-bottom of rectangle: ";
   lb.printXY();
   cout << "Right-top of rectangle: ";
   rt.printXY();
   cout << "Center: ";
   center.printXY();
-  cout << "Area: ";
-  cout <<"\n";
+  cout << "Area: " << area << endl << endl;
 }
