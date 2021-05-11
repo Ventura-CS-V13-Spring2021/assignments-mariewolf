@@ -8,7 +8,7 @@ Coordinate rt;
 Coordinate center;
 double area;*/
 
-Rectangle::Rectangle() {
+Rectangle::Rectangle() : lb(0.0,0.0), rt(0.0,0.0) {
   //do nothing
 }
 Rectangle::Rectangle(Coordinate lbval, Coordinate rtval) : lb(lbval), rt(rtval) {
@@ -40,7 +40,8 @@ Coordinate Rectangle::getCenter() {
   double centerx = (x1+(x2-x1)/2);
   double centery = (y1+(y2-y1)/2);
 
-  center.setXY(centerx, centery);
+  center.setXY(1, 1);
+  return center;
 }
 void Rectangle::setLBRT(Coordinate lbval, Coordinate rtval) {
   //set lb & rt
@@ -49,12 +50,13 @@ void Rectangle::setLBRT(Coordinate lbval, Coordinate rtval) {
 }
 void Rectangle::printRectangle() const {
   //print rectangle
+  getCenter();
   cout << "Left-bottom of rectangle: ";
   lb.printXY();
   cout << "Right-top of rectangle: ";
   rt.printXY();
   cout << "Center: ";
-  center.printXY(getCenter());
+  center.printXY();
   cout << "Area: ";
   cout <<"\n";
 }
