@@ -1,10 +1,11 @@
 #include "rectangle.hpp"
 #include "coordinate.hpp"
 #include <iostream>
+using namespace std;
 /*     double x;
     double y; */
 
-Coordinate::Coordinate() : x(0.0, 0.0), y(0.0, 0.0) {
+Coordinate::Coordinate() {
   //do nothing
 }
 Coordinate::Coordinate(double xval, double yval) : x(xval), y(yval) {
