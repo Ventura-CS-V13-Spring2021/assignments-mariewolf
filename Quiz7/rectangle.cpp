@@ -41,8 +41,6 @@ Coordinate Rectangle::getCenter() {
   double centery = (y1+(y2-y1)/2);
 
   center.setXY(centerx, centery);
-
-  return center;
 }
 void Rectangle::setLBRT(Coordinate lbval, Coordinate rtval) {
   //set lb & rt
@@ -56,7 +54,7 @@ void Rectangle::printRectangle() const {
   cout << "Right-top of rectangle: ";
   rt.printXY();
   cout << "Center: ";
-  center.printXY();
+  center.printXY(getCenter());
   cout << "Area: ";
   cout <<"\n";
 }
