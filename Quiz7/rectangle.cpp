@@ -51,8 +51,8 @@ void Rectangle::setLBRT(Coordinate lbval, Coordinate rtval) {
 }
 void Rectangle::printRectangle() const {
   //print rectangle
-  cout << "test";
-
-
-
+  cout << "Left-bottom of rectangle: " << lb.printXY() << endl;
+  cout << "Right-top of rectangle: " << rt.printXY() << endl;
+  cout << "Center: " << center.printXY() << endl;
+  cout << "Area: " << getArea() << endl;
 }
