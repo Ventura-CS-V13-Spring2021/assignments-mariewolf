@@ -7,27 +7,29 @@ Coordinate rt;
 Coordinate center;
 double area;*/
 
-Rectangle::Rectangle() : lb(0), rt(0) {
+Rectangle::Rectangle() : lb(0.0), rt(0.0) {
   //do nothing
 }
 Rectangle::Rectangle(Coordinate lbval, Coordinate rtval) : lb(lbval), rt(rtval) {
   //do nothing
 }
 Coordinate Rectangle::getLB() const {
-  //do something
+  return lb;
 }
 Coordinate Rectangle::getRT() const {
-  //do something
+  return rt;
 }
 double Rectangle::getArea() {
-  //do something
+  //calculate area
 }
 Coordinate Rectangle::getCenter() {
-  //do something
+  //calculate center
 }
 void Rectangle::setLBRT(Coordinate lbval, Coordinate rtval) {
-  //do something
+  //set lb & rt
+  lb = lbval;
+  rt = rtval;
 }
 void Rectangle::printRectangle() const {
-  //do something
+  //print rectangle
 }
