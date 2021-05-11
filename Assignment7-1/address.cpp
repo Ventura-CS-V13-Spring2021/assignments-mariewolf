@@ -9,8 +9,8 @@ using namespace std;
 Address::Address() : street("blank"), state("null"), zip(0) {
   //do nothing
 }
-Address::Address(string str, string st, int z) {
-  setAddress(str, st, z);
+Address::Address(string str, string st, int z) : street(str), state(st), zip(z) {
+  //do nothing
 }
 string Address::getStreet() const {
   return street;

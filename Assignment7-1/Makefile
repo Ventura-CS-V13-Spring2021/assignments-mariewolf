@@ -6,6 +6,6 @@ DEPS = IntegerArray.hpp
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 buildall: assignment7-1.o address.o DOB.o student.o
-	$(CC) -o run assignment7-1.o address.o DOB.o student.o
+	$(CC) -o assignment7-1 assignment7-1.o address.o DOB.o student.o
 clean:
 	bin/rm -rf *.o a.out 
