@@ -22,7 +22,7 @@ int Address::getZip() const {
   return zip;
 }
 void Address::printAddress() const {
-  cout << "print Address test" << endl;
+  cout << "Address: " << getStreet() << ", " << getState() << ", " << getZip() << endl << endl;
 }
 void Address::setStreet(string addr) {
   street = addr;

@@ -21,7 +21,7 @@ int DOB::getYear() const {
 }
 void DOB::printDate() const {
   // Print all member variable to display the date of birth.
-  cout << "printdate" << endl;
+  cout << "DOB: " << getMonth() << "/" << getDay() << "/" << getYear() << ", ";
 }
 void DOB::setDOB(int m, int d, int y) {
   //set month, day, year

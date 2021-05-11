@@ -36,6 +36,6 @@ void Student::setAddress(Address newaddress) {
 void Student::printStudent() {
   cout << "Student name: " << getSname() << ", ";
   cout << "ID Number: " << getID() << ", ";
-  cout << "DOB: " << dob.getMonth() << "/" << dob.getDay() << "/" << dob.getYear() << ", ";
-  cout << "Address: " << address.getStreet() << ", " << address.getState() << ", " << address.getZip() << endl << endl;
+  dob.printDate();
+  address.printAddress();
 }
