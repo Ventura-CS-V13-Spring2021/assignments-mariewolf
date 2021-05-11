@@ -27,7 +27,7 @@ double Rectangle::getArea() {
   double x2 = rt.getX();
   double y2 = rt.getY();
 
-  double area = (x2-x1)*(y2-y1);
+  area = (x2-x1)*(y2-y1);
   return area;
 }
 Coordinate Rectangle::getCenter() {
@@ -57,6 +57,6 @@ void Rectangle::printRectangle() const {
   rt.printXY();
   cout << "Center: ";
   center.printXY();
-  cout << "Area: " << getArea() << endl;
+  cout << "Area: ";
   cout <<"\n";
 }
