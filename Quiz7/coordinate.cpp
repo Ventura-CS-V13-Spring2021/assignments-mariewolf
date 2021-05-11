@@ -4,7 +4,7 @@
 /*     double x;
     double y; */
 
-Coordinate::Coordinate() : x(0.0), y(0.0) {
+Coordinate::Coordinate() : x(0.0, 0.0), y(0.0, 0.0) {
   //do nothing
 }
 Coordinate::Coordinate(double xval, double yval) : x(xval), y(yval) {
@@ -23,4 +23,5 @@ void Coordinate::setXY(double xval, double yval) {
 }
 void Coordinate::printXY() const {
   //print x & y values
+  cout << "X: " << x << "Y: " << y << endl;
 }
