@@ -86,7 +86,7 @@ int main() {
   cout << "\nThis is a print of that student.";
   sA.printAll();
 
-  Student sB("Katie", num);
+  Student sB("Katie", 0);
   sB = sA;
   cout << "\nThis is a student with a copied class list.";
   sB.printAll();
