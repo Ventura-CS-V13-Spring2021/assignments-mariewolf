@@ -45,11 +45,11 @@ Student::~Student() {
 }
 Student &Student::operator=(Student &rhs) {
   // = operator
-  name = rhs.name;
   numClasses = rhs.numClasses;
   classList = new string[numClasses];
   for (int i=0; i<numClasses; i++)
     classList[i] = rhs.classList[i];
+  return *this;
 }
 void Student::inputClass(string n, int num) {
   //gathers input for classes
@@ -86,8 +86,9 @@ int main() {
   cout << "\nThis is a print of that student.";
   sA.printAll();
 
-  Student sB = sA;
-  cout << "\nThis is a copied object of that student.";
+  Student sB("Katie", num);
+  sB = sA;
+  cout << "\nThis is a student with a copied class list.";
   sB.printAll();
 
   cout << "\nReturned name: " << sB.getName() << endl;
