@@ -58,7 +58,7 @@ Student &Student::operator=(Student &rhs) {
 void Student::inputClass(string n, int num) {
   name = n;
   numClasses = num;
-  if (numClass > 0) {
+  if (numClasses > 0) {
     classList = new string[num];
     for (int i = 0; i < numClasses; i++)
     {
@@ -73,9 +73,12 @@ void Student::resetClass() {
   memset(classList, 0, sizeof(classList));
 }
 void Student::printAll() const {
-  cout << "\nStudent \"" << getName() << "\" has " << getNumclasses() << " classes. They are:" << endl;
-  for (int i=0; i<getNumclasses(); i++) {
-    cout << *(classList+i) << endl;
+  cout << "\nStudent \"" << getName() << "\" has " << getNumclasses() << " classes.";
+  if (getNumclasses() > 0) {
+    cout << " They are:\n";
+    for (int i=0; i<getNumclasses(); i++) {
+      cout << *(classList+i) << endl;
+    }
   }
 }
 
@@ -93,7 +96,10 @@ int main() {
   cout << "\nThis is a student assigned \"Katie\", with 0 classes:";
   Student sB("Katie", 0);
   sB.printAll();
+  cout << "\n\nInput a class for \"Katie\":";
+  sB.inputClass("Katie", 1);
   sB = sA;
+  sB.printAll();
   cout << "\nThis is \"Katie\", with a copied class list:";
   sB.printAll();
 
