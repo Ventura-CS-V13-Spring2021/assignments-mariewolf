@@ -1,21 +1,23 @@
 #include <iostream>
 using namespace std;
 
-int getNumDiv(array i);
+int getNumDiv(int []);
 
 int main() {
-  int arr[6] = [1, 2, 4, 6, 10, 24];
-  num = getNumDiv(array arr);
+  int arr[6] = {1,2,4,6,10,24};
+  int num = getNumDiv(arr);
+  cout << "The number with the most factors is: " << num << endl;
 
   return 0;
 }
 
-int getNumDiv(array numbers) {
+int getNumDiv(int numbers[]) {
   //count # of factors
   int count = 0;
   int prevCount = 0;
-  int maxNum;
-  for (int i=0; i<length; i++) {
+  int maxNum = 0;
+
+  for (int i=0; i<6; i++) {
     count = 0;
     for (int j=2; j<numbers[i]; j++) {
       if ((numbers[i] % j) == 0) {
