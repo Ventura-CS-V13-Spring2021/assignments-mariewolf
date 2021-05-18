@@ -35,7 +35,7 @@ Student::Student(Student &rhs) {
   numClasses = rhs.numClasses;
   classList = new string[numClasses];
   for (int i=0; i<numClasses; i++)
-    classList[i] = rhs.classList[i];
+   *(classList+i) = rhs.classList[i];
 }
 Student::~Student() {
   //destructor
@@ -48,7 +48,7 @@ Student &Student::operator=(Student &rhs) {
   numClasses = rhs.numClasses;
   classList = new string[numClasses];
   for (int i=0; i<numClasses; i++)
-    classList[i] = rhs.classList[i];
+    *(classList+i) = rhs.classList[i];
   return *this;
 }
 void Student::inputClass(string n, int num) {
@@ -56,7 +56,7 @@ void Student::inputClass(string n, int num) {
   classList = new string[num];
   for (int i=0; i<num; i++) {
     cout << "Enter class #" << i+1 << ": ";
-    cin >> classList[i];
+    cin >> *(classList+i); //pointer for class list index [i]
   }
 }
 void Student::resetClass() {
@@ -69,7 +69,7 @@ void Student::printAll() const {
   //print all student info
   cout << "\nStudent \"" << getName() << "\" has " << getNumclasses() << " classes. They are:" << endl;
   for (int i=0; i<getNumclasses(); i++) {
-    cout << classList[i] << endl;
+    cout << *(classList+i) << endl;
   }
 }
 
