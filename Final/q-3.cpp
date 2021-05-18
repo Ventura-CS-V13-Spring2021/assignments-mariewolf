@@ -25,7 +25,6 @@ public:
   string getName() const {return name;};
   int getNumclasses() const {return numClasses;};
 };
-
 Student::Student(string n, int num) {
    name = n;
    numClasses = num;
@@ -36,7 +35,6 @@ Student::Student(string n, int num) {
        cin >> *(classList+i);
    }
 }
-
 Student::Student(Student &rhs) {
   name = rhs.name;
   numClasses = rhs.numClasses;
@@ -89,18 +87,15 @@ int main() {
   cout << "Input the number of classes: ";
   cin >> num;
   Student sA(sname, num);
-  //sA.inputClass(sname, num);
-
-  cout << "\nThis is a print of that student.";
   sA.printAll();
-
+  cout << "\nReturned name: " << sA.getName() << endl;
+  cout << "Returned number of classes: " << sA.getNumclasses() << endl;
+  cout << "\nThis is a student assigned \"Katie\", with 0 classes:";
   Student sB("Katie", 0);
-  sB = sA;
-  cout << "\nThis is a student with a copied class list.";
   sB.printAll();
-
-  cout << "\nReturned name: " << sB.getName() << endl;
-  cout << "Returned number of classes: " << sB.getNumclasses() << endl;
+  sB = sA;
+  cout << "\nThis is \"Katie\", with a copied class list:";
+  sB.printAll();
 
   cout << "\nThis method resets the information for the second student object.";
   sB.resetClass();
