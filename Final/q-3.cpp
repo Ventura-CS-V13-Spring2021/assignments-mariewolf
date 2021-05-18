@@ -35,6 +35,7 @@ Student::Student(string n, int num) {
    }
 }
 Student::Student(Student &rhs) {
+  cout << "Copy constructor\n";
   name = rhs.name;
   numClasses = rhs.numClasses;
   classList = new string[numClasses];
@@ -103,6 +104,7 @@ int main() {
   cout << "\nThis method resets the information for the second student object.";
   sB.resetClass();
   sB.printAll();
+
   sB = sA;
   return 0;
 }
