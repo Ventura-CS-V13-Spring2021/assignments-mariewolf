@@ -4,7 +4,7 @@
 #include <stdio.h>
 using namespace std;
 
-//copied from assignment 10-1
+//mostly copied from assignment 10-1
 
 class Student
 {
@@ -27,12 +27,17 @@ public:
 };
 
 Student::Student(string n, int num) {
-  name = n;
-  numClasses = num;
-  classList = new string[num];
+   name = n;
+   numClasses = num;
+   classList = new string[num];
+   for (int i = 0; i < numClasses; i++)
+   {
+       cout << "Enter the course name: ";
+       cin >> *(classList+i);
+   }
 }
+
 Student::Student(Student &rhs) {
-  //deep copy
   name = rhs.name;
   numClasses = rhs.numClasses;
   classList = new string[numClasses];
@@ -40,10 +45,9 @@ Student::Student(Student &rhs) {
    *(classList+i) = rhs.classList[i];
 }
 Student::~Student() {
-  //destructor
   name = " ";
   numClasses = 0;
-  delete [] classList; //valid
+  delete [] classList;
 }
 Student &Student::operator=(Student &rhs) {
   // = operator
@@ -54,21 +58,23 @@ Student &Student::operator=(Student &rhs) {
   return *this;
 }
 void Student::inputClass(string n, int num) {
-  //gathers input for classes
-  classList = new string[num];
-  for (int i=0; i<num; i++) {
-    cout << "Enter class #" << i+1 << ": ";
-    cin >> *(classList+i); //pointer for class list index [i]
+  name = n;
+  numClasses = num;
+  if (numClass > 0) {
+    classList = new string[num];
+    for (int i = 0; i < numClasses; i++)
+    {
+      cout << "Enter the course name: ";
+      cin >> *(classList+i);
+   }
   }
 }
 void Student::resetClass() {
-  //resets class
   name = " ";
   numClasses = 0;
   memset(classList, 0, sizeof(classList));
 }
 void Student::printAll() const {
-  //print all student info
   cout << "\nStudent \"" << getName() << "\" has " << getNumclasses() << " classes. They are:" << endl;
   for (int i=0; i<getNumclasses(); i++) {
     cout << *(classList+i) << endl;
@@ -83,7 +89,7 @@ int main() {
   cout << "Input the number of classes: ";
   cin >> num;
   Student sA(sname, num);
-  sA.inputClass(sname, num);
+  //sA.inputClass(sname, num);
 
   cout << "\nThis is a print of that student.";
   sA.printAll();
