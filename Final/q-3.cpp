@@ -105,7 +105,7 @@ int main() {
   sB.printAll();
   sB = sA;
 
-  cout << "This shows the copy constructor.";
+  cout << "\n\nThis shows the copy constructor.";
   Student sC(sA);
   sC.printAll();
   return 0;
