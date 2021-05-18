@@ -4,7 +4,7 @@ using namespace std;
 int getNumDiv(int []);
 
 int main() {
-  int arr[6] = {2,8,10,20,30,44};
+  int arr[6] = {3,5,16,25,26,30};
   int num = getNumDiv(arr);
   cout << "The number with the most factors is: " << num << endl;
 
