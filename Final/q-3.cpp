@@ -1,6 +1,6 @@
 #include <string>
 #include <iostream>
-#include <string.h>
+//#include <string.h>
 #include <stdio.h>
 using namespace std;
 
@@ -68,9 +68,8 @@ void Student::inputClass(string n, int num) {
   }
 }
 void Student::resetClass() {
-  name = " ";
   numClasses = 0;
-  memset(classList, 0, sizeof(classList));
+  delete [] classList;
 }
 void Student::printAll() const {
   cout << "\nStudent \"" << getName() << "\" has " << getNumclasses() << " classes.";
@@ -91,16 +90,15 @@ int main() {
   cin >> num;
   Student sA(sname, num);
   sA.printAll();
-  cout << "\nReturned name: " << sA.getName() << endl;
-  cout << "Returned number of classes: " << sA.getNumclasses() << endl;
-  cout << "\nThis is a student assigned \"Katie\", with 0 classes:";
+  cout << "\nThis is a student assigned \"Katie,\" with 0 classes:";
   Student sB("Katie", 0);
   sB.printAll();
-  cout << "\n\nInput a class for \"Katie\":";
+  cout << "\n\nInput a class for \"" << sB.getName() <<".\"\n";
   sB.inputClass("Katie", 1);
-  sB = sA;
   sB.printAll();
-  cout << "\nThis is \"Katie\", with a copied class list:";
+  sB = sA;
+
+  cout << "\nThis is \"" << sB.getName() <<"\", with a copied class list:";
   sB.printAll();
 
   cout << "\nThis method resets the information for the second student object.";
