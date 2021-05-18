@@ -2,13 +2,13 @@
 #include <algorithm>
 using namespace std;
 
-int countRepeats(int [], int);
+void countRepeats(int [], int);
 void printArr(int [], int);
 
 int main() {
   unsigned seed = time(0); //random number seed
   srand(seed);
-  int N = rand() % 20;
+  int N = rand() % 19 + 1;
   int arr[N];
 
   for (int i=0; i<N; i++){
@@ -30,7 +30,7 @@ void printArr(int arr[], int N) {
 
   int prevElm = 0;
 
-  cout << "\nDistinct elements: \n";
+  cout << "\n\nDistinct elements: \n";
   for (int i=0; i<N; i++) {
     if (prevElm != arr[i])
       cout << arr[i] << " ";
@@ -38,21 +38,20 @@ void printArr(int arr[], int N) {
   }
 }
 
-int countRepeats(int numbers[], int N) {
+void countRepeats(int numbers[], int N) {
   //count # of repeats
   int count = 0, prevElm = 0;
-  cout << "N    Count\n";
+  cout << "\n\nN    Count\n";
   for (int i=0; i<N; i++) {
     if (prevElm == numbers[i])
-      break;
-    cout << numbers[i] << "   ";
+      continue;
+    cout << numbers[i] << "    ";
     count = 0;
-    for (int j=0; j<N, j++) {
+    for (int j=0; j<N; j++) {
       if (numbers[i] == numbers[j])
         count += 1;
     }
     cout << count << endl;
     prevElm = numbers[i];
   }
-
 }
