@@ -1,6 +1,5 @@
 #include <string>
 #include <iostream>
-//#include <string.h>
 #include <stdio.h>
 using namespace std;
 
@@ -90,7 +89,7 @@ int main() {
   cin >> num;
   Student sA(sname, num);
   sA.printAll();
-  cout << "\nThis is a student assigned \"Katie,\" with 0 classes:";
+  cout << "\nThis is a student assigned \"Katie,\" assigned 0 classes.";
   Student sB("Katie", 0);
   sB.printAll();
   cout << "\n\nInput a class for \"" << sB.getName() <<".\"\n";
@@ -98,11 +97,12 @@ int main() {
   sB.printAll();
   sB = sA;
 
-  cout << "\nThis is \"" << sB.getName() <<"\", with a copied class list:";
+  cout << "\nThis is \"" << sB.getName() <<"\", with a copied class list.";
   sB.printAll();
 
   cout << "\nThis method resets the information for the second student object.";
   sB.resetClass();
   sB.printAll();
+  sB = sA;
   return 0;
 }
